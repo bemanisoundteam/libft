@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 12:07:22 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/04 14:57:58 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/04 15:03:24 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ static int	ft_isspace(int c)
 
 int	ft_atoi(const char *nptr)
 {
-	int	ret;
-	int	negative;
+	long long	ret;
+	int			negative;
 
 	ret = 0;
 	negative = 0;
