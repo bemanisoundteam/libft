@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 11:34:46 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/04 15:24:33 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/06 21:04:25 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,9 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 
 int		ft_atoi(const char *nptr);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
