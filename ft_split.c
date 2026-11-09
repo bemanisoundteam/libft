@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 13:27:22 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/09 13:49:48 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/09 18:51:37 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static unsigned int	calc_word_len(const char *s, char c)
 	unsigned int	len;
 
 	len = 0;
-	while (*s && *s != c)
+	while (s[len] && s[len] != c)
 		len++;
 	return (len);
 }
