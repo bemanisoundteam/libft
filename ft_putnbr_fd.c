@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 15:23:49 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/09 16:25:52 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/09 18:17:33 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char	nbr[12];
 	char	*head;
-	int	was_negative;
+	int		was_negative;
 
 	nbr[11] = '\0';
 	was_negative = n < 0;
