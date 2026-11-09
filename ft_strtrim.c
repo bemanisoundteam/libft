@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 19:55:26 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/06 21:03:15 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/09 11:01:34 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static size_t	ft_strspn(char const *s, char const *accept)
 	return (count);
 }
 
-static size_t	locate_end(char const *s, char const *set)
+static size_t	calculate_span(char const *s, char const *set)
 {
 	size_t	pos;
 	size_t	last;
@@ -34,7 +34,7 @@ static size_t	locate_end(char const *s, char const *set)
 	while (s[pos])
 	{
 		if (!ft_strchr(set, s[pos]))
-			last = pos;
+			last = pos + 1;
 		pos++;
 	}
 	return (last);
@@ -47,7 +47,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*ret;
 
 	start = ft_strspn(s1, set);
-	span = locate_end(s1 + start, set);
+	span = calculate_span(s1 + start, set);
 	ret = malloc(span + 1);
 	if (!ret)
 		return (ret);
