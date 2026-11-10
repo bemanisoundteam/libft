@@ -6,11 +6,12 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 13:21:52 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/06 13:08:18 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/10 12:16:09 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <errno.h>
+#include <stddef.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include "libft.h"
