@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 19:55:26 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/09 11:01:34 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/11 14:58:31 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,14 @@ static size_t	calculate_span(char const *s, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	start;
 	size_t	span;
 	char	*ret;
 
-	start = ft_strspn(s1, set);
-	span = calculate_span(s1 + start, set);
+	s1 += ft_strspn(s1, set);
+	span = calculate_span(s1, set);
 	ret = malloc(span + 1);
 	if (!ret)
 		return (ret);
-	ft_strlcpy(ret, s1 + start, span + 1);
+	ft_strlcpy(ret, s1, span + 1);
 	return (ret);
 }
