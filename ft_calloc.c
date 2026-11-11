@@ -6,11 +6,10 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 13:21:52 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/10 13:56:28 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/11 20:10:18 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <errno.h>
 #include <stddef.h>
 #include <stdint.h>
 #include <stdlib.h>
@@ -23,8 +22,6 @@ void	*ft_calloc(size_t n, size_t size)
 	ret = NULL;
 	if (size == 0 || n <= SIZE_MAX / size)
 		ret = malloc(n * size);
-	else
-		errno = ENOMEM;
 	if (ret)
 		ft_bzero(ret, n * size);
 	return (ret);
