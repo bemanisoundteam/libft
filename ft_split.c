@@ -6,10 +6,11 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 13:27:22 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/09 18:51:37 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/11 14:05:51 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 #include <stdlib.h>
 #include "libft.h"
 
@@ -72,7 +73,7 @@ char	**ft_split(char const *s, char c)
 		if (!ret[x])
 		{
 			ft_split_destroy(ret, x);
-			break ;
+			return (NULL);
 		}
 		s += word_len;
 		x++;
