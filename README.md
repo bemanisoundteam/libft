@@ -19,7 +19,7 @@ You may use the supplied additional rules to cleanup or (re)compile :
 - `re`, runs `fclean` and `all`
 
 To use this library, simply add libft.a to your compile command. Such as :
-`cc main.c libft.a`
+`cc main.c libft.a` or `cc -L $LIBFT_PATH main.c -lft`
 
 # Resources
 Function prototypes and behaviors are taken from manpages on a Fedora 44 system.
