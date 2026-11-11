@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 20:45:52 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/09 21:59:59 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/11 14:45:58 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*head;
 	t_list	*temp;
 
-	if (!lst)
+	if (!*lst)
 		return ;
 	head = *lst;
 	while (head->next)
