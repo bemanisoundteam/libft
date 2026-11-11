@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 21:13:35 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/09 21:46:34 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/11 15:17:37 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*head;
-	t_list	*pending;
 	t_list	*ret;
 
 	if (!lst)
@@ -27,13 +26,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst->next)
 	{
 		lst = lst->next;
-		pending = ft_lstnew(f(lst->content));
-		if (!pending)
+		head->next = ft_lstnew(f(lst->content));
+		if (!head->next)
 		{
 			ft_lstclear(&ret, del);
 			return (ret);
 		}
-		head->next = pending;
 		head = head->next;
 	}
 	return (ret);
