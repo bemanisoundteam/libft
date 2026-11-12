@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 19:28:10 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/09 13:37:32 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/12 18:01:20 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,7 @@ static char	*ft_strndup(char const *s, size_t len)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	if (ft_strlen(s) <= start)
+		return (ft_strdup(""));
 	return (ft_strndup(s + start, len));
 }
