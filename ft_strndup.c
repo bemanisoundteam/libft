@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 12:04:01 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/13 12:04:01 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/13 17:51:56 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,5 @@
 
 char	*ft_strndup(char const *s, size_t len)
 {
-	size_t	slice_len;
-	char	*ret;
-
-	slice_len = ft_strnlen(s, len);
-	ret = malloc(slice_len + 1);
-	if (ret)
-	{
-		ft_memcpy(ret, s, slice_len);
-		ret[slice_len] = '\0';
-	}
-	return (ret);
+	return (ft_strndup_unchecked(s, ft_strnlen(s, len)));
 }
