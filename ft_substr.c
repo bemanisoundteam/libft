@@ -6,23 +6,13 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 19:28:10 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/12 18:01:20 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/13 11:53:48 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdlib.h>
 #include "libft.h"
-
-static size_t	ft_strnlen(const char *str, size_t size)
-{
-	size_t	ret;
-
-	ret = 0;
-	while (size - ret != 0 && str[ret])
-		ret++;
-	return (ret);
-}
 
 static char	*ft_strndup(char const *s, size_t len)
 {
