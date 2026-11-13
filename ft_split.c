@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 13:27:22 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/13 13:11:01 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/13 13:51:03 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char	**ft_split(char const *s, char c)
 		while (*s == c)
 			s++;
 		word_len = calc_word_len(s, c);
-		ret[x] = ft_substr(s, 0, word_len);
+		ret[x] = ft_strndup(s, word_len);
 		if (!ret[x])
 		{
 			ft_split_destroy(ret);
