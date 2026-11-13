@@ -6,23 +6,13 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 19:55:26 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/11 14:58:31 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/13 11:59:27 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdlib.h>
 #include "libft.h"
-
-static size_t	ft_strspn(char const *s, char const *accept)
-{
-	size_t	count;
-
-	count = 0;
-	while (s[count] && ft_strchr(accept, s[count]))
-		count++;
-	return (count);
-}
 
 static size_t	calculate_span(char const *s, char const *set)
 {
