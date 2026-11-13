@@ -6,12 +6,11 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 13:27:22 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/13 13:51:03 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/13 15:32:22 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include <stdlib.h>
 #include "libft.h"
 
 static unsigned int	calc_word_len(const char *s, char c)
@@ -62,7 +61,7 @@ char	**ft_split(char const *s, char c)
 		while (*s == c)
 			s++;
 		word_len = calc_word_len(s, c);
-		ret[x] = ft_strndup(s, word_len);
+		ret[x] = ft_strndup_unchecked(s, word_len);
 		if (!ret[x])
 		{
 			ft_split_destroy(ret);
