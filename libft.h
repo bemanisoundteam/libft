@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 11:34:46 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/13 12:00:24 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/13 12:06:11 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ size_t			ft_strlcat(char *dst, const char *src, size_t size);
 
 void			*ft_calloc(size_t n, size_t size);
 char			*ft_strdup(const char *s);
+char			*ft_strndup(char const *s, size_t len);
 
 int				ft_toupper(int c);
 int				ft_tolower(int c);
