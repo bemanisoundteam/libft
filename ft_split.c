@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 13:27:22 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/11 14:05:51 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/13 13:11:01 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,6 @@ static unsigned int	count_words(const char *s, char c)
 	return (wc);
 }
 
-static void	ft_split_destroy(char **arr, unsigned int len)
-{
-	while (len-- > 0)
-		free(arr[len]);
-	free(arr);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	char			**ret;
@@ -72,7 +65,7 @@ char	**ft_split(char const *s, char c)
 		ret[x] = ft_substr(s, 0, word_len);
 		if (!ret[x])
 		{
-			ft_split_destroy(ret, x);
+			ft_split_destroy(ret);
 			return (NULL);
 		}
 		s += word_len;
