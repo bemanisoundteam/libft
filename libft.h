@@ -6,12 +6,15 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 11:34:46 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/16 13:18:47 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/17 18:54:39 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# define FT_FALSE 0
+# define FT_TRUE 1
 
 # include <stddef.h>
 
