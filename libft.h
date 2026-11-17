@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 11:34:46 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/17 18:54:39 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/17 20:33:38 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # define FT_TRUE 1
 
 # include <stddef.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
@@ -74,6 +75,8 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_split_destroy(char **arr);
+char			*ft_uimtoa_base(
+					uintmax_t nbr, const char *base, const char *prefix);
 
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **lst, t_list *new);
