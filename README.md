@@ -12,11 +12,11 @@ Easiest way to look at the full list is to look at [libft's header](libft.h).
 # Instructions
 To compile this library, simply run `make`.  
 You may use the supplied additional rules to cleanup or (re)compile :
-- `all` (default rule), makes libft.a
-- `libft.a`, compiles each file and bundles them into the libft.a archive file
-- `clean`, deletes the object individual object files
-- `fclean`, runs the `clean` rule and deletes the libft archive file
-- `re`, runs `fclean` and `all`
+- `all` (default rule): makes libft.a
+- `libft.a`: compiles each source file, then bundles the resulting object files into the libft.a archive
+- `clean`: deletes each individual object file
+- `fclean`: runs the `clean` rule then deletes libft.a
+- `re`: runs `fclean` then `all`
 
 To use this library, simply add libft.a to your compile command. Such as :
 `cc main.c libft.a` or `cc -L $LIBFT_PATH main.c -lft`
