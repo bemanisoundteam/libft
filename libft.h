@@ -6,7 +6,7 @@
 /*   By: ccabanne <ccabanne@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 11:34:46 by ccabanne          #+#    #+#             */
-/*   Updated: 2026/11/17 20:33:38 by ccabanne         ###   ########.fr       */
+/*   Updated: 2026/11/18 22:11:52 by ccabanne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,6 @@ t_list			*ft_lstmap(
 					void *(*f)(void *),
 					void (*del)(void *)
 					);
+t_list			*ft_lstnew_delonerr(void *content, void (*del)(void *));
 
 #endif
